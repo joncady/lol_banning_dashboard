@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+#dashboard {
+  padding: 1rem;
+  margin: 2rem;
+  text-align: center;
+}
+
+label {
+  padding: 0.2rem;
+}
+
+h2 {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.champ {
+  width: 55px;
+}
+
+.champ:hover {
+  cursor: pointer;
+  border: 2px black solid;
+}
+
+.champ img {
+  width: 100%;
+}
+
+.selected {
+  border: 2px white solid;
+}
+
+.row {
+  padding: 0;
+  margin: 0;
+}

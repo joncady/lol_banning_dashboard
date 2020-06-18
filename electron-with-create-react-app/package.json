@@ -1,0 +1,36 @@
+{
+  "name": "drafting-app",
+  "author": "Jonathan Cady",
+  "version": "0.1.0",
+  "description": "Banning App for League of Legends",
+  "private": true,
+  "devDependencies": {
+    "electron": "^1.7.9",
+    "electron-builder": "^20.38.5",
+    "electron-packager": "^13.1.1",
+    "foreman": "^2.0.0",
+    "react-scripts": "0.8.5"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "fs": "0.0.1-security",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "reactstrap": "^8.4.1",
+    "socket.io": "^2.2.0",
+    "socket.io-client": "^2.2.0"
+  },
+  "homepage": "./",
+  "main": "src/electron-starter.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "package-win": "electron-packager . lol-dashboard --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/favicon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Dashboard\"",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "electron": "electron .",
+    "dev": "nf start -p 3000",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  }
+}

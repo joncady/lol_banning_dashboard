@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+* {
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box; 
+}
+
+div {
+    background-size: cover;
+}
+
+#state {
+    background-color: #1A2522;
+}
+
+.player-card, #countdown, #state {
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;   
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+#countdown {
+    font-size: 25px;
+}
+
+#state {
+    padding: 1rem;
+}
+
+.loading-card {
+    border-radius: 2px;
+    background-position: center top;
+}
+
+.ban-card {
+    border-radius: 2px;
+    background-color: #1A2522;
+    background-image: url('./ban.png');
+    background-size: 100%;
+}
+
+#champ-area {
+    position: absolute;
+    top: 743px;
+    left: 76px;
+    height: 244px;
+    width: 1766px;
+    /* background-image: linear-gradient(45deg, #0197EE, #FE0002); */
+    background-color: #1A2522;
+    border-radius: 5px;
+}
+
+.red-team {
+    border: 3px solid #FE0002;
+}
+
+.blue-team {
+    border: 3px solid #0197EE;
+}

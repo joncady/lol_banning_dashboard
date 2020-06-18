@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Overlay</title>
+  <meta name="generator" content="Google Web Designer 5.0.3.0130">
+  <link href="./position.css" rel="stylesheet">
+  <link href="./custom.css" rel="stylesheet">
+  <script src="http://localhost:8080/socket.io/socket.io.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="overlay.js"></script>
+</head>
+
+<body>
+  <div id="champ-area"></div>
+  <div class="gwd-div-1wmo gwd-div-m24z gwd-div-flhv loading-card" id="champ1"></div>
+  <div class="gwd-div-1wmo gwd-div-1vdb gwd-div-eqyj loading-card" id="champ5"></div>
+  <div class="gwd-div-1wmo gwd-div-1apg gwd-div-1w65 loading-card" id="champ4"></div>
+  <div class="gwd-div-1wmo gwd-div-18zf gwd-div-1cc8 loading-card" id="champ3"></div>
+  <div class="gwd-div-1wmo gwd-div-fup9 gwd-div-68d5 loading-card" id="champ2"></div>
+  <div class="gwd-div-1wmo gwd-div-m24z gwd-div-1y4b gwd-div-vgyt loading-card" id="champ6"></div>
+  <div class="gwd-div-1wmo gwd-div-m24z gwd-div-1y4b gwd-div-1nyj" id="phasePic"></div>
+  <div class="gwd-div-1wmo gwd-div-1vdb gwd-div-ozzo loading-card" id="champ10"></div>
+  <div class="gwd-div-1wmo gwd-div-1apg gwd-div-1pvn loading-card" id="champ9"></div>
+  <div class="gwd-div-1wmo gwd-div-18zf gwd-div-jl62 loading-card" id="champ8"></div>
+  <div class="gwd-div-1wmo gwd-div-fup9 gwd-div-1evq loading-card" id="champ7"></div>
+  <div class="gwd-div-1pyo gwd-div-1tk9 player-card" id="player1"></div>
+  <div class="gwd-div-1pyo gwd-div-13yc gwd-div-6ge1 player-card" id="player2"></div>
+  <div class="gwd-div-1pyo gwd-div-1873 gwd-div-eu6w player-card" id="player5"></div>
+  <div class="gwd-div-1pyo gwd-div-13yc gwd-div-1c8m gwd-div-1r00 gwd-div-1qpg" id="countdown"></div>
+  <div class="gwd-div-1pyo gwd-div-13yc gwd-div-1c8m gwd-div-1r00 gwd-div-13fd" id="state"></div>
+  <div class="gwd-div-1pyo gwd-div-1873 gwd-div-1hy3 gwd-div-17xq player-card" id="player6"></div>
+  <div class="gwd-div-1pyo gwd-div-13yc gwd-div-1c8m gwd-div-s0x0 gwd-div-1jzs player-card" id="player7"></div>
+  <div class="gwd-div-1pyo gwd-div-13yc gwd-div-1c8m gwd-div-qnqp player-card" id="player8"></div>
+  <div class="gwd-div-1pyo gwd-div-1873 gwd-div-1hy3 gwd-div-1xgn player-card" id="player9"></div>
+  <div class="gwd-div-1pyo gwd-div-13yc gwd-div-1c8m gwd-div-s0x0 gwd-div-10jq player-card" id="player10"></div>
+  <div class="gwd-div-1pyo gwd-div-1lfh player-card" id="player3"></div>
+  <div class="gwd-div-1pyo gwd-div-13yc gwd-div-17vw player-card" id="player4"></div>
+  <div class="gwd-div-6lc8 gwd-div-uuhx gwd-div-1k3h ban-card blue-team" id="ban1a"></div>
+  <div class="gwd-div-6lc8 gwd-div-1sx5 gwd-div-jrcj gwd-div-ktib ban-card blue-team" id="ban3a"></div>
+  <div class="gwd-div-6lc8 gwd-div-4j78 gwd-div-1nzy gwd-div-1enl ban-card blue-team" id="ban2a"></div>
+  <div class="gwd-div-6lc8 gwd-div-1sx5 gwd-div-1laf gwd-div-i66x ban-card blue-team" id="ban5a"></div>
+  <div class="gwd-div-6lc8 gwd-div-4j78 gwd-div-14ch gwd-div-1gew ban-card blue-team" id="ban4a"></div>
+  <div class="gwd-div-6lc8 gwd-div-uuhx gwd-div-kj9s ban-card red-team" id="ban1b"></div>
+  <div class="gwd-div-6lc8 gwd-div-1sx5 gwd-div-jrcj gwd-div-pxrr ban-card red-team" id="ban3b"></div>
+  <div class="gwd-div-6lc8 gwd-div-4j78 gwd-div-1nzy gwd-div-rsvl ban-card red-team" id="ban2b"></div>
+  <div class="gwd-div-6lc8 gwd-div-1sx5 gwd-div-1laf gwd-div-m0cr ban-card red-team" id="ban5b"></div>
+  <div class="gwd-div-6lc8 gwd-div-4j78 gwd-div-14ch gwd-div-fnem ban-card red-team" id="ban4b"></div>
+  <div class="gwd-div-1o08 gwd-div-va2c gwd-div-3ayl" id="sum1b"></div>
+  <div class="gwd-div-1o08 gwd-div-dkry gwd-div-gm7x" id="sum1a"></div>
+  <div class="gwd-div-1o08 gwd-div-va2c gwd-div-5vcd gwd-div-1hd4" id="sum2b"></div>
+  <div class="gwd-div-1o08 gwd-div-dkry gwd-div-polw gwd-div-lpt4" id="sum2a"></div>
+  <div class="gwd-div-1o08 gwd-div-va2c gwd-div-5vcd gwd-div-4os7 gwd-div-1u36" id="sum3b"></div>
+  <div class="gwd-div-1o08 gwd-div-dkry gwd-div-polw gwd-div-16jl gwd-div-16p1" id="sum3a"></div>
+  <div class="gwd-div-1o08 gwd-div-va2c gwd-div-5vcd gwd-div-4os7 gwd-div-1lrx gwd-div-wa67" id="sum5b"></div>
+  <div class="gwd-div-1o08 gwd-div-dkry gwd-div-polw gwd-div-16jl gwd-div-1wpq gwd-div-1iod" id="sum5a"></div>
+  <div class="gwd-div-1o08 gwd-div-va2c gwd-div-5vcd gwd-div-4os7 gwd-div-1lrx gwd-div-1flp" id="sum6b"></div>
+  <div class="gwd-div-1o08 gwd-div-dkry gwd-div-polw gwd-div-16jl gwd-div-1wpq gwd-div-113v" id="sum6a"></div>
+  <div class="gwd-div-1o08 gwd-div-va2c gwd-div-5vcd gwd-div-4os7 gwd-div-1j5j gwd-div-zizj" id="sum4b"></div>
+  <div class="gwd-div-1o08 gwd-div-dkry gwd-div-polw gwd-div-16jl gwd-div-k55y gwd-div-gmgt" id="sum4a"></div>
+  <div class="gwd-div-1o08 gwd-div-va2c gwd-div-5vcd gwd-div-13o5" id="sum7b"></div>
+  <div class="gwd-div-1o08 gwd-div-dkry gwd-div-polw gwd-div-bg66" id="sum7a"></div>
+  <div class="gwd-div-1o08 gwd-div-va2c gwd-div-5vcd gwd-div-4os7 gwd-div-1aoq" id="sum8b"></div>
+  <div class="gwd-div-1o08 gwd-div-dkry gwd-div-polw gwd-div-16jl gwd-div-1a81" id="sum8a"></div>
+  <div class="gwd-div-1o08 gwd-div-va2c gwd-div-5vcd gwd-div-4os7 gwd-div-1lrx gwd-div-pntj" id="sum10b"></div>
+  <div class="gwd-div-1o08 gwd-div-dkry gwd-div-polw gwd-div-16jl gwd-div-1wpq gwd-div-1oas" id="sum10a"></div>
+  <div class="gwd-div-1o08 gwd-div-va2c gwd-div-5vcd gwd-div-4os7 gwd-div-1j5j gwd-div-saax" id="sum9b"></div>
+  <div class="gwd-div-1o08 gwd-div-dkry gwd-div-polw gwd-div-16jl gwd-div-k55y gwd-div-5lvn" id="sum9a"></div>
+</body>
+
+</html>

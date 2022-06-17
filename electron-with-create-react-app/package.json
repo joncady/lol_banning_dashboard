@@ -5,7 +5,7 @@
   "description": "Banning App for League of Legends",
   "private": true,
   "devDependencies": {
-    "electron": "^1.7.9",
+    "electron": "^15.5.5",
     "electron-builder": "^20.38.5",
     "electron-packager": "^13.1.1",
     "foreman": "^2.0.0",
